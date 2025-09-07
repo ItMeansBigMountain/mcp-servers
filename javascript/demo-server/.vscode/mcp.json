@@ -1,0 +1,22 @@
+{
+    "servers": {
+        "test-demo": {
+            "type": "stdio",
+            "command": "npm",
+            "args": [
+                "run",
+                "server:dev"
+            ],
+            "cwd": "${workspaceFolder}",
+            // DEV IS FOR SEEING SERVER TO CLIENT COMMUNICATION
+            "dev": {
+                // "watch": "src/**/*.js",
+                "watch": "src/**/*.ts",
+                "debug": {
+                    "type": "node"
+                }
+            }
+        }
+    },
+    "inputs": []
+}

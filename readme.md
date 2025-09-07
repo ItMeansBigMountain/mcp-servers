@@ -1,5 +1,9 @@
 tools tools tools 
 
+
+
+
+
 - did you know that using typescript files in a node project, you have to add a `tsconfig.json` file to make the app work
 
 - there is a dev dependency that is like postman for mcp. its called inspector 
@@ -13,13 +17,27 @@ tools tools tools
 
 ---
 
-# add mcp servers into vs code from github
+# Add local mcp server 
+- `ctrl + shift + p` , then search for mcp servers and youll see list + add servers
+- select the method of import `choose stdio`
+   - [command (stdio) , http (theyre running a server) , npm package, pip package, docker image] 
+- add command to start up environment `npm run server:dev`
+- give the server a name
+- select either `user-settings for global vscode mcp server` OR `workspace settings for directory specific workspace /.vscode `
+
+
+# Add mcp servers into vs code from github
 `the .vscode folder can help set some project configurations`
 you can create a `mcp.json` 
 add write the reference to the mcp server
 go to the file and click on add server
 `npm` `pip` `docker image`
 
+
+
+
+s
+---
 # create your own mcp server notes 
 [youtube video to learn mcp](https://www.youtube.com/watch?v=ZoZxQwp1PiM)
 

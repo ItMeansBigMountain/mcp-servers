@@ -6,6 +6,10 @@ tools tools tools
    - `npm install -D @modelcontextprotocol/inspector`
    - youll now need to go to the `package.json` and add the server.inspector to the scripts key [check javascript ](javascript\demo-server\package.json) 
 
+- theres this error in the [javascript/demo-server](javascript/demo-server) where on startup the npm node banner messes with the st.out of the console... so you have to use `console.Error()` to log stuff in the console when using transport st.out
+
+
+
 
 ---
 

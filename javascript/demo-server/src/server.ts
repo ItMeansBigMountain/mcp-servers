@@ -1,6 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import z from "zod";
+import { z } from "zod";
 import fs from "node:fs/promises";
 
 
@@ -20,7 +20,7 @@ const server = new McpServer({
 // PLACEHOLDER TOOL FUNCTION
 server.tool(
     "PLACEHOLDER", // tool name
-    "description to placeholder function. We are using zod in the schema for some reason.", // tool description
+    "description: using zod in the schema for some reason.", // tool description
     { // tool parameters schema
         name: z.string(),
         email: z.string(),
@@ -37,7 +37,9 @@ server.tool(
     async (params) => {
         // CORE FUNCTIONALITY OF THE mcp TOOL/METHOD
         try {
-            console.log("Core Functionality:", params);
+            // write some code here ...
+            console.error("[placeholder] args:", params); // safe log
+
             // TELL USER THE FUNCTION SUCCEEDED
             return {
                 content: [
@@ -52,23 +54,25 @@ server.tool(
                 ]
             }
         }
-        return {}
+
+        // ALWAYS RETURN A RESPONSE WITH CONTENT
+        return { content: [] }
     }
 )
 
 // USE CASE EXAMPLE FUNCTION - CREATE USER
 server.tool(
-    "create-user", 
-    "creates a new user in the database", 
-    { 
+    "create-user",
+    "creates a new user in the database",
+    {
         name: z.string(),
         email: z.string(),
         address: z.string(),
         phone: z.string()
     },
-    {  
+    {
         title: "create user",
-        readOnlyHint: false, 
+        readOnlyHint: false,
         destructiveHint: false,
         idempotentHint: false,
         openWorldHint: true
@@ -88,7 +92,7 @@ server.tool(
                 ]
             }
         }
-        return {}
+        return { content: [] }
     }
 )
 
@@ -97,7 +101,7 @@ async function createUser(
     user: { name: string, email: string, address: string, phone: string }
 ) {
     // import users data
-    const users = await import("../data/db.json",{ with: { type: "json" } } )
+    const users = await import("../data/db.json", { with: { type: "json" } })
         .then(m => m.default);
 
     // create a new user id

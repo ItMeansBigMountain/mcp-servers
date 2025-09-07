@@ -1,1 +1,23 @@
-{}
+[
+  {
+    "id": 1,
+    "name": "Affan",
+    "email": "a",
+    "address": "a",
+    "phone": "a"
+  },
+  {
+    "id": 2,
+    "name": "oh",
+    "email": "dang",
+    "address": "it",
+    "phone": "worked"
+  },
+  {
+    "id": 3,
+    "name": "using the inspect tool",
+    "email": "after resetting the server",
+    "address": "with command",
+    "phone": "npm run server:inspect"
+  }
+]

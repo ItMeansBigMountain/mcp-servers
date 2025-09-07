@@ -41,9 +41,9 @@ when the server gets information from the ai context.
 ### main() function
 
 - TRANSPORT (Python & JavaScript)
-	- Standard IO
-		- Communicate through the terminal using stdin/stdout; best for local apps running together.
-	- HTTP Streaming
-		- Stream data over HTTP; ideal for web apps or remote clients not on the same network.
-
-- 
+	- STDIO
+		- Communicate through standard input/output streams; best for local development and direct terminal interaction.
+	- Streamable HTTP
+		- Bi-directional streaming over HTTP; recommended for web applications and remote clients needing continuous data flow.
+	- SSE (Server-Sent Events)
+		- One-way server-to-client event streaming over HTTP; useful for sending real-time updates from server to client. **(Deprecated in favor of HTTP streaming)**

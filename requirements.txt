@@ -1,0 +1,3 @@
+# Requirements for mcp-servers demo
+# Add FastMCP and any other dependencies here
+fastmcp

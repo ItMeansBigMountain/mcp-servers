@@ -16,6 +16,21 @@ const server = new McpServer({
     }
 });
 
+const resources = server.resource(
+    "users",
+    "user://all", // location of the resource
+    {}
+)
+
+
+
+
+
+
+
+
+
+
 
 // PLACEHOLDER TOOL FUNCTION
 server.tool(

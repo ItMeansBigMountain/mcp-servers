@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "aks-mcp-server": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["aks_mcp_server.py"]
+    }
+  }
+}
